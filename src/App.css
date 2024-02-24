@@ -1,0 +1,119 @@
+html * {
+  font-family: 'Open Sans', sans-serif;
+  padding: 5px;
+}
+
+table {
+  width: 100%;
+  padding: 0;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+.header th {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  background-color: white !important;
+}
+
+
+td,
+th {
+  text-align: center;
+  border: 1px solid black !important;
+  padding: 10px;
+  width: 15%;
+  box-sizing: border-box;
+}
+
+tr>th:first-of-type,
+tr>td:first-of-type {
+  width: 100px;
+  /* background-color: rgb(171, 171, 171); */
+  background-color: hsl(206, 91%, 74%);
+  font-weight: bold;
+}
+
+.headerSmall {
+  font-weight: normal;
+  font-size: smaller;
+}
+
+.highlighted {
+  background-color: hsl(206, 80%, 88%);
+}
+
+.center {
+  text-align: center;
+}
+
+.mobile-header {
+  display: none;
+}
+
+tr.desktop {
+  display: table-row;
+  position: sticky !important;
+  top: 0;
+}
+
+.mobile {
+  display: none;
+}
+
+.otherDetails{
+  text-align: center;
+}
+
+.timeTable{
+  margin-bottom: 3em;
+}
+
+.roomTable {
+  table-layout: fixed;
+  page-break-before  : always;
+}
+
+.roomTable tr,
+.roomTable td,
+.roomTable th {
+  width: auto !important;
+}
+
+
+.roomTable tr>th:first-of-type,
+.roomTable tr>td:first-of-type
+{
+  width: 150px !important;
+  background-color:hsl(206, 80%, 88%);
+}
+
+@media only screen and (max-width: 760px) {
+  .desktop {
+      display: none !important;
+  }
+
+  .mobile {
+      display: inline;
+  }
+
+  .mobile-header {
+      display: block;
+  }
+
+  tr {
+      display: block;
+      width: 100% !important;
+      background-color: white !important;
+      margin-bottom: 1em;
+  }
+
+  .roomTable tr>th:first-of-type,
+  .roomTable tr>td:first-of-type,
+  td,
+  th {
+      display: block;
+      width: 100% !important;
+  }
+}
