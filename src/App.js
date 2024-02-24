@@ -3,30 +3,33 @@ import OtherDetails from './OtherDetails';
 
 function App() {
 
-  const rooms = ['Banquet', 'Room 125-132', 'Room 239-241', 'Room 203', 'Room 209', 'Room 208'];
+  const rooms = ['Banquet', 'Room 125-132', 'Room 239-241', 'Room 203', 'Room 209', 'Room 208', 'Room 202'];
   const earlyMorning = [
-    { 'workshop': 'Forgiveness', 'leader': 'Ali	B', 'room': rooms[0] },
-    { 'workshop': 'Gratitude', 'leader': 'Suzanne	H', 'room': rooms[1] },
-    { 'workshop': 'Steps 1, 2 and 3', 'leader': 'Jim	H', 'room': rooms[2] },
-    { 'workshop': 'Gratitude', 'leader': 'Anne	E', 'room': rooms[3] },
-    { 'workshop': 'Meditation', 'leader': 'Lisa	M', 'room': rooms[4] },
-    { 'workshop': 'Alateen Meeting (Closed)', 'leader': '', 'room': rooms[5] }]
+    { 'workshop': 'Discovering Choices', 'leader': 'Ann	D', 'room': rooms[0] },
+    { 'workshop': 'Happy Joyous & Free Isn\'t Free', 'leader': 'Ryan S', 'room': rooms[1] },
+    { 'workshop': 'A Little Time for Myself', 'leader': 'Jessica M', 'room': rooms[2] },
+    { 'workshop': 'Steps 11 & 12', 'leader': 'Anne	E', 'room': rooms[3] },
+    { 'workshop': 'Writing Room', 'leader': 'Self Lead', 'room': rooms[4] },
+    { 'workshop': 'Alateen Meeting (Closed)', 'leader': '', 'room': rooms[5] },
+    { 'workshop': 'AMIAS Training', 'leader': 'Pamela Young', 'room': rooms[6] }]
     ;
   const lateMorning = [
-    { 'workshop': 'Detachment', 'leader': 'John	B', 'room': rooms[0] },
-    { 'workshop': 'Abundance', 'leader': 'Ryan	S', 'room': rooms[1] },
-    { 'workshop': 'Gratitude', 'leader': 'Wayne	P', 'room': rooms[2] },
-    { 'workshop': 'Compassion', 'leader': 'Marsha	O', 'room': rooms[3] },
-    { 'workshop': 'Forum Writing Room', 'leader': 'Self Lead', 'room': rooms[4] },
-    { 'workshop': 'Alateen Meeting (Open to all Al-Anon members)', 'leader': '', 'room': rooms[5] }
+    { 'workshop': 'Foregiveness', 'leader': 'Wayne P', 'room': rooms[0] },
+    { 'workshop': 'Service Work', 'leader': 'Maria K', 'room': rooms[1] },
+    { 'workshop': 'Sponsorship', 'leader': 'Jim Everitt', 'room': rooms[2] },
+    { 'workshop': 'Meditation', 'leader': 'Don L', 'room': rooms[3] },
+    { 'workshop': 'Writing Room', 'leader': 'Self Lead', 'room': rooms[4] },
+    { 'workshop': 'Alateen Meeting (Closed)', 'leader': '', 'room': rooms[5] },
+    { 'workshop': 'AMIAS Training', 'leader': 'Pamela Young', 'room': rooms[6] }
   ];
   const afterNoon = [
-    { 'workshop': 'Understanding Ourselves', 'leader': 'Janet	D', 'room': rooms[0] },
-    { 'workshop': 'Meditation', 'leader': 'Kara	K', 'room': rooms[1] },
+    { 'workshop': 'Steps 1, 2, 3', 'leader': 'Sue	D', 'room': rooms[0] },
+    { 'workshop': 'Traditions and Concepts at Home', 'leader': 'King	C', 'room': rooms[1] },
     { 'workshop': 'Controlling our Emotional Nature', 'leader': 'Michael F', 'room': rooms[2] },
-    { 'workshop': 'Meditation', 'leader': 'Don L', 'room': rooms[3] },
-    { 'workshop': 'Forum Writing Room', 'leader': 'Self Lead', 'room': rooms[4] },
-    { 'workshop': 'Alateen Meeting (Closed)', 'leader': '', 'room': rooms[5] }
+    { 'workshop': 'Changing my perspective', 'leader': 'Austin S', 'room': rooms[3] },
+    { 'workshop': 'Writing Room', 'leader': 'Self Lead', 'room': rooms[4] },
+    { 'workshop': 'Alateen Meeting (Closed)', 'leader': '', 'room': rooms[5] },
+    { 'workshop': 'AMIAS Training', 'leader': 'Pamela Young', 'room': rooms[6] }
   ];
 
   const colSpan = earlyMorning.length;
@@ -38,7 +41,7 @@ function App() {
         <table className='roomTable' id="roomTable">
           <thead className="header">
             <tr role="row" className="highlighted">
-              <th colSpan="4">Winter Roundup 2023 - Room Schedule<br /><span className='headerSmall'>(Workshops listed by room)</span></th>
+              <th colSpan={colSpan}>Winter Roundup 2024 - Room Schedule<br /><span className='headerSmall'>(Workshops listed by room)</span></th>
             </tr>
           </thead>
           <thead className='desktop'>
@@ -67,10 +70,11 @@ function App() {
 
   return (
     <>
+      {/* <div className='center'><a href='#roomTable' className='button'>View workshops by room</a> | <a href='#timeTable'>View workshops by time</a></div> */}
       <table role="table" className='timeTable' id="timeTable">
         <thead className="header">
           <tr role="row" className="highlighted">
-            <th colSpan="7">Winter Roundup 2023 - Time Schedule<br /><span className='headerSmall'>(Workshops listed by time)</span></th>
+            <th colSpan={colSpan}>Winter Roundup 2024 - Time Schedule<br /><span className='headerSmall'>(Workshops listed by time)</span></th>
             {/* <th className='desktop' role="columnheader"></th> */}
           </tr>
         </thead>
@@ -167,7 +171,7 @@ function App() {
             </tr>
         </tbody>
       </table>
-      {<RoomSchedule />}
+      {/* {<RoomSchedule />} */}
     </>
   );
 }

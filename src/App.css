@@ -2,6 +2,9 @@ html * {
   font-family: 'Open Sans', sans-serif;
   padding: 5px;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 table {
   width: 100%;
@@ -15,6 +18,10 @@ table {
   font-size: x-large;
   font-weight: bold;
   background-color: white !important;
+}
+
+.center {
+  text-align: center;
 }
 
 
@@ -89,7 +96,7 @@ tr.desktop {
   background-color:hsl(206, 80%, 88%);
 }
 
-@media only screen and (max-width: 760px) {
+/* @media only screen and (max-width: 760px) { */
   .desktop {
       display: none !important;
   }
@@ -116,4 +123,4 @@ tr.desktop {
       display: block;
       width: 100% !important;
   }
-}
+/* } */
